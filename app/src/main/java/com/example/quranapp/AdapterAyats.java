@@ -3,6 +3,7 @@ package com.example.quranapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import java.util.List;
 
 public class AdapterAyats extends RecyclerView.Adapter<AdapterAyats.AyatViewHolder> {
     private List<VersesItem> results;
+    private ImageView imageView;
 
     public AdapterAyats(List<VersesItem> results) {
         this.results = results;

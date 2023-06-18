@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,7 +36,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         holder.textViewSurahLatin.setText(result.getNameSimple());
         holder.textViewTerjemahanSurah.setText(result.getTranslatedName().getName());
         holder.textViewSurahArab.setText(result.getNameArabic());
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,11 +54,13 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textViewSurahLatin , textViewTerjemahanSurah, textViewSurahArab;
+        ImageView imageViewAyat;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewSurahLatin = itemView.findViewById(R.id.tvSurahLatin);
             textViewTerjemahanSurah = itemView.findViewById(R.id.tvTerjemahanSurah);
             textViewSurahArab = itemView.findViewById(R.id.tvSurahArab);
+            imageViewAyat = itemView.findViewById(R.id.playAudio);
         }
     }
 

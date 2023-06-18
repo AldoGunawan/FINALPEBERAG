@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 
 import com.example.quranapp.Models.SurahModel.Chapters;
 import com.example.quranapp.Models.SurahModel.ChaptersItem;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
 
+    public ImageView imageView;
     private MainAdapter mainAdapter;
 
     private List<ChaptersItem> results = new ArrayList<>();
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpView() {
         recyclerView = findViewById(R.id.recyclerView);
+        imageView = findViewById(R.id.playAudio);
     }
 
     private void getDataFromApi (){
@@ -66,4 +69,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
